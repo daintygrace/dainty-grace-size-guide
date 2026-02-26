@@ -1092,19 +1092,19 @@
                       This can help you fine-tune your fit.
                     </p>
                     
-                    <div className="grid grid-cols-3 gap-6">
+                    <div className="flex flex-col sm:grid sm:grid-cols-3 gap-4 sm:gap-6 max-w-2xl mx-auto">
                       {calculatedSize.smaller && (
-                        <div className="bg-[#f8f5fc] p-8 text-center border border-[#e8e0f0] rounded-sm">
+                        <div className="bg-[#f8f5fc] p-6 sm:p-8 text-center border border-[#e8e0f0] rounded-sm">
                           <p className="text-xs tracking-wide text-[#999999] uppercase mb-3">Smaller Band</p>
                           <p className="text-3xl font-serif text-[#1a1a1a]">{calculatedSize.smaller}</p>
                         </div>
                       )}
-                      <div className="bg-[#8b7ba8] p-8 text-center rounded-sm">
+                      <div className="bg-[#8b7ba8] p-6 sm:p-8 text-center rounded-sm">
                         <p className="text-xs tracking-wide text-white/70 uppercase mb-3">Your Size</p>
                         <p className="text-3xl font-serif text-white">{calculatedSize.current}</p>
                       </div>
                       {calculatedSize.larger && (
-                        <div className="bg-[#f8f5fc] p-8 text-center border border-[#e8e0f0] rounded-sm">
+                        <div className="bg-[#f8f5fc] p-6 sm:p-8 text-center border border-[#e8e0f0] rounded-sm">
                           <p className="text-xs tracking-wide text-[#999999] uppercase mb-3">Larger Band</p>
                           <p className="text-3xl font-serif text-[#1a1a1a]">{calculatedSize.larger}</p>
                         </div>
@@ -1241,7 +1241,7 @@
                               {item.myth}
                             </h3>
                             
-                            <div className={`overflow-hidden transition-all duration-500 ${selectedMyth === item.id ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                            <div className={`overflow-hidden transition-all duration-500 ${selectedMyth === item.id ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
                               <div className="pt-4 border-t border-[#e8e0f0]">
                                 <p className="text-xs tracking-[0.2em] text-[#8b7ba8] uppercase mb-2">Truth</p>
                                 <div className="text-sm text-[#666666] leading-relaxed space-y-4">
