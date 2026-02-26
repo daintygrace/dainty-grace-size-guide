@@ -1002,7 +1002,7 @@
 
                   <div className="space-y-10">
                     <div>
-                      <div className="flex items-baseline gap-4 mb-4">
+                      <div className="flex flex-col md:flex-row md:items-baseline gap-4 mb-4">
                         <span className="text-3xl font-serif text-[#8b7ba8]">01</span>
                         <div className="flex-1">
                           <h3 className="text-xl font-serif text-[#1a1a1a] mb-2">
@@ -1013,7 +1013,7 @@
                             directly under your bust. The tape should feel comfortably firm without 
                             restricting your breathing.
                           </p>
-                          <div className="flex items-center gap-4">
+                          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                             <input
                               type="number"
                               placeholder="28"
@@ -1021,7 +1021,7 @@
                               onChange={(e) => setMeasurements({...measurements, underband: e.target.value})}
                               className="flex-1 px-6 py-4 bg-[#f8f5fc] border border-[#c9b8e0] text-[#1a1a1a] placeholder-[#999999] focus:outline-none focus:border-[#8b7ba8] transition-colors text-center text-xl rounded-sm"
                             />
-                            <span className="text-sm text-[#666666] uppercase tracking-wide">inches</span>
+                            <span className="text-sm text-[#666666] uppercase tracking-wide text-center sm:text-left">inches</span>
                           </div>
                           <p className="text-xs text-[#999999] mt-3 italic">
                             If odd number, round up to the nearest even number
@@ -1033,7 +1033,7 @@
                     <div className="w-full h-px bg-[#e8e0f0]"></div>
 
                     <div>
-                      <div className="flex items-baseline gap-4 mb-4">
+                      <div className="flex flex-col md:flex-row md:items-baseline gap-4 mb-4">
                         <span className="text-3xl font-serif text-[#8b7ba8]">02</span>
                         <div className="flex-1">
                           <h3 className="text-xl font-serif text-[#1a1a1a] mb-2">
@@ -1044,7 +1044,7 @@
                             naturally and measure around the fullest part. This leaning measurement 
                             is more accurate than a standing measurement as it captures your true breast volume.
                           </p>
-                          <div className="flex items-center gap-4">
+                          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                             <input
                               type="number"
                               step="0.5"
@@ -1053,7 +1053,7 @@
                               onChange={(e) => setMeasurements({...measurements, leaningBust: e.target.value})}
                               className="flex-1 px-6 py-4 bg-[#f8f5fc] border border-[#c9b8e0] text-[#1a1a1a] placeholder-[#999999] focus:outline-none focus:border-[#8b7ba8] transition-colors text-center text-xl rounded-sm"
                             />
-                            <span className="text-sm text-[#666666] uppercase tracking-wide">inches</span>
+                            <span className="text-sm text-[#666666] uppercase tracking-wide text-center sm:text-left">inches</span>
                           </div>
                         </div>
                       </div>
