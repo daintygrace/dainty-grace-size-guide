@@ -111,7 +111,8 @@
           return;
         }
         
-        const roundedBand = underband % 2 === 0 ? Math.round(underband) : Math.round(underband) + 1;
+        // Round up to nearest even number
+        const roundedBand = Math.ceil(underband / 2) * 2;
         const roundedDifference = Math.round(leaningBust - roundedBand);
         const cupSizes = ['AA', 'A', 'B', 'C', 'D', 'DD', 'E', 'F', 'FF', 'G', 'GG', 'H'];
         const cupSize = cupSizes[roundedDifference] || cupSizes[cupSizes.length - 1];
