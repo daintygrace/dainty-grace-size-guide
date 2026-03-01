@@ -118,9 +118,9 @@
         const cupSize = cupSizes[roundedDifference] || cupSizes[cupSizes.length - 1];
         
         const sisterSizes = {
-          smaller: roundedDifference > 1 ? `${roundedBand - 2}${cupSizes[roundedDifference + 1]}` : null,
+          smaller: roundedDifference >= 1 && cupSizes[roundedDifference + 1] ? `${roundedBand - 2}${cupSizes[roundedDifference + 1]}` : null,
           current: `${roundedBand}${cupSize}`,
-          larger: `${roundedBand + 2}${cupSizes[roundedDifference - 1]}`
+          larger: cupSizes[roundedDifference - 1] ? `${roundedBand + 2}${cupSizes[roundedDifference - 1]}` : null
         };
         
         setCalculatedSize(sisterSizes);
