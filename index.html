@@ -114,13 +114,15 @@
         // Round up to nearest even number
         const roundedBand = Math.ceil(underband / 2) * 2;
         const roundedDifference = Math.round(leaningBust - roundedBand);
-        const cupSizes = ['AA', 'A', 'B', 'C', 'D', 'DD', 'E', 'F', 'FF', 'G', 'GG', 'H'];
-        const cupSize = cupSizes[roundedDifference] || cupSizes[cupSizes.length - 1];
+        const cupSizes = ['AAA', 'AA', 'A', 'B', 'C', 'D', 'DD', 'E', 'F', 'FF', 'G', 'GG', 'H'];
+        // Adjust index since we added AAA at the beginning
+        const cupIndex = roundedDifference + 1;
+        const cupSize = cupSizes[cupIndex] || cupSizes[cupSizes.length - 1];
         
         const sisterSizes = {
-          smaller: roundedDifference >= 1 && cupSizes[roundedDifference + 1] ? `${roundedBand - 2}${cupSizes[roundedDifference + 1]}` : null,
+          smaller: cupSizes[cupIndex + 1] ? `${roundedBand - 2}${cupSizes[cupIndex + 1]}` : null,
           current: `${roundedBand}${cupSize}`,
-          larger: cupSizes[roundedDifference - 1] ? `${roundedBand + 2}${cupSizes[roundedDifference - 1]}` : null
+          larger: cupSizes[cupIndex - 1] ? `${roundedBand + 2}${cupSizes[cupIndex - 1]}` : null
         };
         
         setCalculatedSize(sisterSizes);
